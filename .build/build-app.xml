@@ -98,11 +98,11 @@
     <if>
       <not><equals arg1="${atf.win3264.url}" arg2=""/></not>
       <then>
-        <property name="release.7z.filename" value="${papp.id}-${app.version}-${app.release}.7z"/>
+        <property name="release.7z.filename" value="${papp.id}-${app.version}-${app.release}.zip"/>
         <property name="release.setup.filename" value="${papp.id}-${app.version}-${app.release}-setup"/>
       </then>
       <else>
-        <property name="release.7z.filename" value="${papp.id}-${atf.arch}-${app.version}-${app.release}.7z"/>
+        <property name="release.7z.filename" value="${papp.id}-${atf.arch}-${app.version}-${app.release}.zip"/>
         <property name="release.setup.filename" value="${papp.id}-${atf.arch}-${app.version}-${app.release}-setup"/>
       </else>
     </if>
@@ -111,7 +111,7 @@
     <if>
       <istrue value="${papp.out.7z}"/>
       <then>
-        <echo message="Building 7z archive..."/>
+        <echo message="Building zip archive..."/>
         <sevenzip src="${build.path}/*" dest="${release.path}\${release.7z.filename}" format="zip"/>
       </then>
     </if>
