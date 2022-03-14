@@ -112,7 +112,7 @@
       <istrue value="${papp.out.7z}"/>
       <then>
         <echo message="Building 7z archive..."/>
-        <sevenzip src="${build.path}/*" dest="${release.path}\${release.7z.filename}" format="7z"/>
+        <sevenzip src="${build.path}/*" dest="${release.path}\${release.7z.filename}" format="zip"/>
       </then>
     </if>
 
